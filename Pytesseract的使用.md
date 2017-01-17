@@ -47,7 +47,7 @@ pytesseract依赖于PIL和tesseract-ocr，其中前者是图像处理库，后�
 
 		File "*\lib\subprocess.py", line 958, in _execute_child startupinfo)
 		WindowsError: [Error 2] 
-	这个错误的原因是因为没有将tesseract.exe没有加在环境变量PATH中。可以通过如下方式解决：找到pytesseract的安装目录（如果通过pip安装，那么就在%python根目录%/Lib/site-packages/pytesseract），打开pytesseract.py文件，找到如下文件：
+	这个错误的原因是因为没有将tesseract.exe没有加在环境变量PATH中。可以通过如下方式解决：找到pytesseract的安装目录（如果通过pip安装，那么就在%python安装目录%/Lib/site-packages/pytesseract），打开pytesseract.py文件，找到如下文件：
 
 		# CHANGE THIS IF TESSERACT IS NOT IN YOUR PATH, OR IS NAMED DIFFERENTLY
 		tesseract_cmd = 'tesseract'
